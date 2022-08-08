@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet"> 
+
+    <title>Flexbox - Introdução</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        h1 {
+            font-size: 1rem;
+            text-align: center;
+            font-family: 'Press Start 2P', cursive;
+            text-shadow: 1.5px 1.5px 2.0px #000;
+            color: rgb(255, 16, 16);
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-family: 'Times New Roman', Times, serif;
+            text-shadow: 1px 1px 2px #000;
+            color: rgb(38, 0, 255);
+
+        }
+
+        h1.tiny {
+            font-size: 0.3rem;
+        }
+
+        div.main-container {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Área do header */
+
+        div.container-header {
+            display: flex;
+            border: 2px solid red;
+            height: 10%;
+            padding: 2px;
+            margin: 2px;
+        }
+
+        div.header-left {
+            background-color: aqua;
+            border: 2px dashed red;
+            box-sizing: content-box;
+            flex-grow: 1;
+            margin-right: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        div.header-right {
+            background-color: aquamarine;
+            border: 2px dashed red;
+            box-sizing: content-box;
+            flex-grow: 4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        /* Área do body */
+        div.container-body {
+            display: flex;
+            border: 2px solid blue;
+            height: 75%;
+            padding: 2px;
+            margin: 2px;
+        }
+
+        div.body-left {
+            background-color: rgba(0, 132, 255, 0.616);
+            border: 2px dashed red;
+            box-sizing: content-box;
+            flex-grow: 1;
+            margin-right: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        div.body-right {
+            border: 2px dashed rgb(0, 0, 0);
+            box-sizing: content-box;
+            flex-grow: 6;
+            display: flex;
+            flex-direction: column;
+        }
+
+        div.body-right--left {
+            background-color: rgba(141, 0, 122, 0.432);
+            border: 2px dashed red;
+            box-sizing: content-box;
+            flex-grow: 1;
+            margin: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        div.body-right--right {
+            background-color: rgba(195, 0, 255, 0.4);
+            border: 2px dashed red;
+            box-sizing: content-box;
+            flex-grow: 1;
+            margin: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        div.rotate {
+            transform: rotate(-90deg);
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Área do footer */
+
+        div.container-footer {
+            display: flex;
+            border: 2px solid green;
+            height: 10%;
+            padding: 2px;
+            margin: 2px;
+        }
+
+        div.footer-left {
+            background-color: rgba(13, 241, 13, 0.562);
+            border: 2px dashed red;
+            box-sizing: content-box;
+            flex-grow: 4;
+            margin-right: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        div.footer-right {
+            background-color: rgb(0, 255, 98);
+            border: 2px dashed red;
+            box-sizing: content-box;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container-header">
+            <div class="header-left"><h1>LEFT-HEADER</h1><p>Proporção: 1</p></div>
+            <div class="header-right"><h1>RIGHT-HEADER</h1><p>Proporção: 4</p></div>
+        </div>
+        <div class="container-body">
+            <div class="body-left"><div class="rotate"><h1>LEFT-BODY</h1><p>Proporção: 1</p></div></div>
+            <div class="body-right">
+                <div class="body-right--left"><h1>RIGHT-BODY--LEFT</h1><p>Proporção: 1</p></div>
+                <div class="body-right--right"><h1>RIGHT-BODY--RIGHT</h1><p>Proporção: 1</p></div>
+            </div>
+        </div>
+        <div class="container-footer">
+            <div class="footer-left"><h1>LEFT-FOOTER</h1><p>Proporção: 4</p></div>
+            <div class="footer-right"><h1>RIGHT-FOOTER</h1><p>Proporção: 1</p></div>
+        </div>
+    </div>
+</body>
+</html>
