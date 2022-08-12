@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID - Introdução</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .celula {
+            border: 1px solid black;
+            background-color: lightcoral;
+            font-size: 1.15em;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+
+        .main-header {
+            display: grid;
+            height: 10vh;
+            grid-template-columns: 1fr 5fr;
+        }
+
+        .main-main {
+            display: grid;
+            height: 80vh;
+            grid-template-columns: 1fr 5fr;
+        }
+
+        .main-footer {
+            display: grid;
+            height: 10vh;
+            grid-template-columns: 1fr 5fr;
+        }
+
+        .main--left {
+            display: grid;
+            grid-template-rows: 1fr 8fr;
+        }
+
+        .main--right {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .celulaInferior {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main-header">
+            <div class="celula">1</div>
+            <div class="celula">2</div>
+        </div>
+    </header>
+    <main>
+        <div class="main-main">
+            <div class="main--left">
+                <div class="celula">3</div>
+                <div class="celula">4</div>
+            </div>
+            <div class="main--right">
+                <div class="celula">5</div>
+                <div class="celulaInferior">
+                    <div class="celula">6</div>
+                    <div class="celula">7</div>  
+                </div>          
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="main-footer">
+            <div class="celula">8</div>
+            <div class="celula">9</div>
+        </div>
+    </footer>
+</body>
+</html>
