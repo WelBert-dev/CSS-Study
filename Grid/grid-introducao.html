@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/style.css">
+    <title>GRID - Exercicio 2</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 1.15em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* VIWE PORT HEIGHT */
+
+header {
+    height: 25vh;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+main {
+    height: 55vh;
+    margin-bottom: 2px;
+}
+
+footer {
+    height: 20vh;
+    text-align: center;
+}
+
+.top50Percent {
+    position: relative;
+    top: 45%;
+}
+
+
+/* COMMOM */
+
+.celula {
+    border: 1px solid black;
+    background-color: lightcoral;
+}
+
+h1 {
+    font-size: 1.15em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+/* HEADER */
+.main-header {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 1fr 4fr;
+    gap: 2px;
+}
+
+.header--left {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2px;
+}
+
+.header--right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+}
+
+
+/* MAIN */
+.main-main {
+    display: grid;
+    height: 100%;
+    grid-template-columns: 2fr 8fr 1fr;
+    gap: 2px;
+}
+
+
+/* FOOTER */
+.main-footer {
+    display: grid;
+    height: 100%;
+    grid-template-rows: 2.5fr 1fr;
+    gap: 2px;
+}
+
+.footerSuperior {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 2px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="main-header">
+            <div class="header--left">
+                <div class="celula"><h1 class="top50Percent">1</h1></div>
+                <div class="celula"><h1 class="top50Percent">2</h1></div>
+            </div>
+            <div class="header--right">
+                <div class="celula"><h1 class="top50Percent">3</h1></div>
+                <div class="celula"><h1 class="top50Percent">4</h1</div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-main">
+            <div class="celula"><h1 class="top50Percent">5</h1></div>
+            <div class="celula">
+                <form action="#" method="post">
+                    <div>
+                        <label for="txtNome">Nome: </label>
+                        <input type="text" name="txtNome" size="80" />
+                    </div>
+                    <div>
+                        <label for="txtIdade">Idade: </label>
+                        <input type="number" name="txtIdade" max="100" min="1" />
+                    </div>
+                    <div>
+                        <label for="chbxIsento">Isento: </label>
+                        <input type="checkbox" name="chbxIsento"/>  
+                    </div>
+                    <div>
+                        <label for="txtSenha">Senha: </label>
+                        <input type="password" name="txtSenha"/>  
+                    </div>
+                    <div>
+                        <label for="cmbEstado">Estado: </label>
+                        <select name="cmbEstado">
+                            <option value="SP" selected>São Paulo</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espirito Santo</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Limpar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="celula"><h1 class="top50Percent">7</h1></div>
+        </div>
+    </main>
+    <footer>
+        <div class="main-footer">
+            <div class="footerSuperior">
+                <div class="celula"><h1 class="top50Percent">8</h1></div>
+                <div class="celula"><h1 class="top50Percent">9</h1></div>
+            </div>
+            <div class="celula"><h1 class="top50Percent">10</h1></div>
+        </div>
+    </footer>
+</body>
+</html>
