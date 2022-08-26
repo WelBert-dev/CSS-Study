@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="./js/introdJQuery.js"></script>
+    <title>Introdução ao JQuery</title>
+
+     <!-- acrescimos para bootstrap-->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/@popperjs/core@2"> </script>
+
+    <link rel="stylesheet" href="./css/introdJQuert.css">
+
+    <script>
+        $(document).ready(()=>{
+            $('.campo').hide();
+
+            $("#detalhe").click(()=>{
+
+                if ($(".campo").is(':hidden'))
+                {
+                    $('.campo').show();
+                }
+                else 
+                {
+                    $('.campo').hide();
+                }
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <div class="w-50 m-auto">
+            <form id="main-form" class="d-flex flex-column">
+                <div>
+                    <label for="txtNome">Nome:</label>
+                    <input class="w-100" id="txtNome" type="text" required/>
+                </div>
+                <div>
+                    <label for="cbxIdade">Idade</label>
+                    <select id="cbxIdade" name="cbxIdade">
+                    </select>
+                </div>
+                <div>
+                    <label for="txtEndereco">Endereço:</label>
+                    <input class="w-100" id="txtEndereco" type="text" required/>
+                </div>
+                <div>
+                    <label for="txtTelefone">Telefone:</label>
+                    <input class="w-100" id="txtTelefone" type="text" required/>
+                </div>
+                <div>
+                    <button class="btn btn-primary w-100">Detalhe</button>
+                </div>
+                <button class="btn btn-primary" type="submit">Enviar</button>
+                <button class="btn btn-secundari" type="reset">Limpar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
