@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao JavaScript</title>
+
+    <script>
+        function inicia()
+        {
+            var txtNome = document.querySelector("#txtNome");
+            var cbxIdade = document.getElementById("cbxIdade");
+            // var cbxIdade = document.getElementById("cbxIdade").value; -> ja pega o option selecionado
+            var txtEndereco = document.getElementById("txtEndereco");
+            var txtTelefone = document.getElementById("txtTelefone");
+            
+
+            // Se campos idade e telefone são numéricos
+
+            const validaIdadeTel = () => {
+                var listOptions = cbxIdade.getElementsByTagName('option');
+
+                for (var element of listOptions)
+                {
+                    if (element.selected)
+                    { // encontra idade selecionada
+
+                        // finalmente verifica
+                        try 
+                        {
+                            var telefone = txtTelefone.value;
+                            var idade = element.value;
+
+                            console.log(telefone);
+                            console.log(idade);
+
+                            if (isNaN(telefone))
+                            {
+                                window.alert("Telefone é Number!");
+                            }
+                            else
+                            {
+                                window.alert("Telefone não é Number!");
+                            }
+
+                            if (isNaN(idade))
+                            {
+                                window.alert("Idade é Number!");
+                            }
+                            else 
+                            {
+                                window.alert("Idade não é Number");
+                            }             
+                        }
+                        catch (error)
+                        {
+                           window.alert(error.message);
+                        }
+                    }
+                };
+            }
+
+            // alimenta combobox idade
+
+            for (let i = 0; i < 30; i++)
+            {
+                var optionFilho = document.createElement("option");
+                optionFilho.setAttribute("value", i+1);
+                optionFilho.appendChild(document.createTextNode(i+1));
+                cbxIdade.appendChild(optionFilho);
+            }
+
+            // cancela evento submit do form
+            var form = document.querySelector("#main-form");
+
+            form.addEventListener("submit", (event) => {
+                event.preventDefault();
+
+                validaIdadeTel();
+                //validaIdadeMaiorQueZero();
+                //validaNomeMenor40Chars();
+            });
+
+
+        }
+        window.addEventListener("load", inicia);
+    </script>
+</head>
+<body>
+    <header>
+
+    </header>
+    <main>
+        <form id="main-form">
+            <div>
+                <label for="txtNome">Nome:</label>
+                <input id="txtNome" type="text" required/>
+            </div>
+            <div>
+                <label for="cbxIdade">Idade</label>
+                <select id="cbxIdade" name="cbxIdade">
+                </select>
+            </div>
+            <div>
+                <label for="txtEndereco">Endereço:</label>
+                <input id="txtEndereco" type="text" required/>
+            </div>
+            <div>
+                <label for="txtTelefone">Telefone:</label>
+                <input id="txtTelefone" type="text" required/>
+            </div>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </form>
+    </main>
+</body>
+</html>
