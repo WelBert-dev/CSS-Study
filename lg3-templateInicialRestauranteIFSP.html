@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            width: 100vw;
+        }
+
+        main {
+            width: 100vw;
+        }
+
+        footer {
+            width: 100vw;
+        }
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .main-navbar {
+            background-color: #226015;
+            border: 4px double #000;
+            gap: 0.8rem;
+            opacity: 1;
+            padding: 0.5rem;
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .main-navbar--btn {
+            background: linear-gradient(90deg,#252525e0 15%,#1b1b1bed 70%);
+            border: 4px double var(--main-color);
+            border-radius: 10%;
+            box-shadow: 0.1rem 0.1rem 0.2rem #000;
+            color: #fff;
+            font-family: cursive;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.5rem;
+            text-decoration: none;
+            text-shadow: 0.15rem 0.09rem 0.009rem #000;
+            transition: all .3s ease;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="row main-navbar">
+        <div>
+            <a className="brand" href="/">Restaurante IFSP</a>
+        </div>
+        <div>
+            <a class="main-navbar--btn" href="/cart">Carrinho</a>
+            <a class="main-navbar--btn"href="/signin">Logar</a>
+        </div>
+    </header>
+    <main>
+
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
